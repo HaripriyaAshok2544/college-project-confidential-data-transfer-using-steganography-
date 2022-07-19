@@ -10,11 +10,10 @@ class otp_verifier(Tk):
         self.geometry("500x600")
 
         self.n=random.randint(1000,9999)
-        self.client=Client("AC515d2e9a34e6dede74997a30d72ecc6e","51f979a2d1e1ea4538317b14fbeb0cd9")
-        self.client.messages.create(to =["+918281232128"],
-                                    from_="+12512418901",
+        self.client=Client("Enter User2 account SID","Enter User2 Auth Token")
+        self.client.messages.create(to =["User2 Phone Number"],
+                                    from_="User2 Twilio Number",
                                     body=self.n)
-
 
 
     def Labels(self):
@@ -56,11 +55,10 @@ class otp_verifier(Tk):
 
     def resendOTP(self):
         self.n = random.randint(1000, 9999)
-        self.client = Client("AC515d2e9a34e6dede74997a30d72ecc6e", "51f979a2d1e1ea4538317b14fbeb0cd9")
-        self.client.messages.create(to=["+918281232128"],
-                                    from_="+12512418901",
+        self.client=Client("Enter User2 account SID","Enter User2 Auth Token")
+        self.client.messages.create(to =["User2 Phone Number"],
+                                    from_="User2 Twilio Number",
                                     body=self.n)
-
 
 if __name__=="__main__":
         window=otp_verifier()
